@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import Scrollbar
+from tkinter import Scrollbar, StringVar, OptionMenu
 import random # For generating random responses
 import openai
 import json
@@ -79,6 +79,13 @@ input_box.pack(padx=10, pady=10, fill=tk.BOTH)
 # Create a "Record Speech" button
 record_button = tk.Button(root, text="Record Speech", command=record_speech)
 record_button.pack()
+
+# create a drop-down menu for language selection
+languages = ["en", "es"] # add more languages as needed
+selected_languages = StringVar(root)
+selected_languages.set(languages[0]) # set the default language 
+language_menu = OptionMenu(root, selected_languages, *languages)
+language_menu.pack()
 
 # Create a send button
 send_button = tk.Button(root, text="Send", command=send_message)
