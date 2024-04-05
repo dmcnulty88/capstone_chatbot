@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StagCoders Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div id="logo">
+                <!-- add your logo image here-->
+                <img src="{{url_for('static', filename='fairfieldUniversityLogo.png')}}" alt="Logo" height="150"
+                    width="150">
+            </div>
+
+            <i class="fa-solid fa-comments"></i><button id="instructions-button" onclick="addInstructions()">Instructions</button>
+            <i class="fa-solid fa-comments"></i><button id="new-chat-button" onclick="startNewChat()">New chat </button>
+
+            <!--Dropown menu for selecting language-->
+            <div id="language-select-sidebar" class="language-container">
+                <i class="fa-solid fa-earth-americas"></i>
+                <select id="language-select">
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="italian">Italian</option>
+                    <option value="french">French</option>
+                    <option value="german">German</option>
+                </select>
+            </div>
+
+            <i class="fa-brands fa-spotify"></i><button id="spotify-button" onclick="toggleSpotify()">Spotify</button>
+            <i class="fa-solid fa-map-location-dot"></i><button id="map-button" onclick="toggleMap()">Map</button>
+
+            <div id="credits">
+                <p>Presented By:</p>
+                <ul>
+                    <li>Andrew Visceglia</li>
+                    <li>Connor Hehn</li>
+                    <li>David McNulty</li>
+                    <li>Reyes Huerta</li>
+                    <li>Dr. Sidike Pahending</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="chat-container">
+            <ul class="chat">
+                <li class="message">Hello, how can I assist you?</li>
+                <!-- Previous messages go here -->
+            </ul>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your message..." onkeydown="handleKeyDown(event)">
+                <button id="send-button" onclick="sendMessage()">Send</button>
+                <button id="record-button" onclick="startSpeechRecognition()">Record</button>
+            </div>
+            <div id="additional-buttons">
+                <button onclick="handleSample(this)">What are the campus dining options?</button>
+                <button onclick="handleSample(this)">Where can I find the library?</button>
+                <button onclick="handleSample(this)">How do I access the career services office?</button>
+                <button onclick="handleSample(this)">Where can I find information about academic advising?</button>
+                <!-- Add more buttons as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

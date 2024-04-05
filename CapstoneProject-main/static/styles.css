@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+/* CSS styles for the sidebar */
+.sidebar {
+    width: 15%;
+    background-color: #f1f1f1; /* Adjust as needed */
+    padding: 20px; /* Add padding around the sidebar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style for the logo */
+#logo {
+    width: auto;
+    margin-bottom: 10px; /* Add margin below the logo */
+}
+
+/* Style for the buttons and icons */
+.sidebar button {
+    margin-bottom: 10px; /* Add margin between buttons */
+    display: block; /* Make buttons appear in block format */
+}
+
+/* Style for the dropdown container */
+.language-container {
+    margin-bottom: 20px; /* Add margin below the language dropdown */
+}
+
+/* Style for the language dropdown */
+#language-select {
+    width: 100%; /* Make dropdown fill entire width */
+    padding: 5px; /* Add padding inside the dropdown */
+}
+
+.chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+.chat {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.message {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.user-message {
+    text-align: left;
+    background-color: #93c7dc;
+}
+.input-container {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+#user-input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#send-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #83be83;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#send-button:hover {
+    background-color: #5ebd5e;
+}
+#record-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #51a6b1;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex; /* Ensure the button's content is displayed as flex */
+    align-items: center; /* Align the content vertically */
+}
+#record-button:hover{
+    background-color: #34a6b6;
+}
+#record-button.active {
+    background-color: lightcoral; /* Change the background color when active */
+}
+
+#mic {
+    height: 100%; /* Set the height to fill the parent button */
+    width: auto; /* Ensure the width adjusts proportionally */
+}
+
+#new-chat-button,
+#spotify-button,
+#instructions-button,
+#map-button {
+    margin-top: 10px;
+    padding: 10px 10px;
+    border: none;
+    background-color: lightslategray;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#new-chat-button:hover,
+#spotify-button:hover,
+#instructions-button:hover,
+#map-button:hover {
+    background-color: #51a6b1;
+}
+
+#spotify-button.active{
+    background-color: #51a6b1;
+}
+#map-button.active {
+    background-color: #51a6b1;
+}
+
+#language-select-sidebar {
+    margin-top: 10px;
+    width: 55%;
+    margin-bottom: 0px;
+}
+
+#language-select {
+    /*  */
+    height: 35px;
+    /* padding: 10px 20px; */
+    margin-bottom: 10px; /* Add margin between buttons */
+    border: none;
+    background-color: lightslategray; /* Green color */
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+#language-select:hover {
+    background-color: #51a6b1; /* Darker green color on hover */
+}
+
+
+.sidebar button {
+    width: 55%; /* Set the width */
+    height: 35px; /* Set the height */
+    margin-bottom: 5%; /* Add margin between buttons */
+    display: block; /* Make buttons appear in block format */
+    border: none; /* Remove default border */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Style for the credits */
+#credits {
+    margin-top: auto; /* Push the credits to the bottom */
+    text-align: center; /* Center-align the text */
+}
+
+#credits p {
+    font-size: 18px; /* Adjust font size */
+    margin-bottom: 10px; /* Add margin below paragraphs */
+}
+
+#credits ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+#credits li {
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: 5px; /* Add margin between list items */
+}
+
+#additional-buttons {
+    margin-top: 20px; /* Add margin above the additional buttons */
+}
+
+#additional-buttons button {
+    width: 45%; /* Set the width to fill the container */
+    padding: 10px; /* Add padding inside the buttons */
+    margin-bottom: 10px; /* Add margin between buttons */
+    border: none; /* Remove default border */
+    background-color: lightslategray; /* Set background color */
+    color: white; /* Set text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#additional-buttons button:hover {
+    background-color: #51a6b1; /* Darker background color on hover */
+}
