@@ -1,0 +1,9 @@
+Flask
+huggingface_hub
+dotenv
+requests
+folium
+polyline
+base64
+os
+gunicorn
